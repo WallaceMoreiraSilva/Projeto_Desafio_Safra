@@ -1,6 +1,0 @@
-USE ProvaSafra
-GO
-
-INSERT INTO Telefones VALUES ('021','974888765','M', '123.443.245-12');
-INSERT INTO Telefones VALUES ('011','977888654','F', '125.336.789-50');
-

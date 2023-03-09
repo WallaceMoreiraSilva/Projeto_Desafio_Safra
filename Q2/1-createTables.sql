@@ -84,9 +84,11 @@ CREATE TABLE Financiamentos(
 	[Id] int IDENTITY(1,1) NOT NULL,
 	[CPF] varchar(20) NOT NULL,	
 	[TipoFinanciamentoId] int NOT NULL,
-	[ValorTotal] int NOT NULL,	
+	[ValorTotal] int NOT NULL,
+	[QtdParcelas] int NOT NULL,
 	[DataUltimoVencimento] datetime NOT NULL	
-	CONSTRAINT [PK_Financiamentos] PRIMARY KEY CLUSTERED ([Id] ASC)
+	CONSTRAINT [PK_Financiamentos] PRIMARY KEY CLUSTERED ([Id] ASC),
+	CHECK (CPF LIKE '___.___.___-__')
  )
 	PRINT('Tabela nova Financiamentos criada em - Database: ProvaSafra');
 
@@ -125,10 +127,10 @@ BEGIN
 CREATE TABLE Parcelamentos(
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[FinanciamentoId] int NOT NULL,
-	[QtdParcelas] int NOT NULL,
+	[NumeroParcela] int NOT NULL,
 	[ValorParcela] numeric(8,2) NOT NULL,
 	[DataVencimento] datetime NOT NULL,
-	[DataPagamento] datetime NOT NULL
+	[DataPagamento] datetime
 	CONSTRAINT [PK_Parcelamentos] PRIMARY KEY CLUSTERED ([Id] ASC)
  )
 	PRINT('Tabela nova Parcelamentos criada em - Database: ProvaSafra');
