@@ -1,0 +1,62 @@
+2022-12-29 10:38:28.267 -03:00 [INF] Now listening on: https://localhost:7140
+2022-12-29 10:38:28.375 -03:00 [INF] Now listening on: http://localhost:5189
+2022-12-29 10:38:28.392 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-29 10:38:28.399 -03:00 [INF] Hosting environment: Development
+2022-12-29 10:38:28.404 -03:00 [INF] Content root path: C:\Users\walla\OneDrive\Documentos\Source\Projeto_AspNetCore_Dapper_SqLite\ContasBancarias.Api\
+2022-12-29 10:38:30.041 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/index.html - -
+2022-12-29 10:38:30.841 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/_framework/aspnetcore-browser-refresh.js - -
+2022-12-29 10:38:30.861 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/index.html - - - 200 - text/html;charset=utf-8 832.0331ms
+2022-12-29 10:38:30.861 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 20.0203ms
+2022-12-29 10:38:30.945 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/_vs/browserLink - -
+2022-12-29 10:38:31.003 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.6451ms
+2022-12-29 10:38:31.249 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - -
+2022-12-29 10:38:31.667 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 417.8123ms
+2022-12-29 10:51:50.980 -03:00 [INF] Now listening on: https://localhost:7140
+2022-12-29 10:51:51.107 -03:00 [INF] Now listening on: http://localhost:5189
+2022-12-29 10:51:51.140 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-29 10:51:51.150 -03:00 [INF] Hosting environment: Development
+2022-12-29 10:51:51.160 -03:00 [INF] Content root path: C:\Users\walla\OneDrive\Documentos\Source\Projeto_AspNetCore_Dapper_SqLite\ContasBancarias.Api\
+2022-12-29 10:51:52.968 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/index.html - -
+2022-12-29 10:51:54.000 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/_framework/aspnetcore-browser-refresh.js - -
+2022-12-29 10:51:54.036 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/index.html - - - 200 - text/html;charset=utf-8 1079.3372ms
+2022-12-29 10:51:54.036 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 31.4224ms
+2022-12-29 10:51:54.116 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/_vs/browserLink - -
+2022-12-29 10:51:54.529 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 412.5511ms
+2022-12-29 10:51:55.045 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - -
+2022-12-29 10:51:55.625 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 580.5434ms
+2022-12-29 10:52:28.152 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/api/v1/conta-bancaria/consultar-todas - -
+2022-12-29 10:52:28.202 -03:00 [INF] Executing endpoint 'ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.BuscarTodasContasBancarias (ContasBancarias.Api)'
+2022-12-29 10:52:28.247 -03:00 [INF] Route matched with {action = "BuscarTodasContasBancarias", controller = "ContaBancaria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BuscarTodasContasBancarias() on controller ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController (ContasBancarias.Api).
+2022-12-29 10:52:28.361 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContasBancarias.Application.Commands.Responses.ContaBancariaResponse, ContasBancarias.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-29 10:52:28.401 -03:00 [INF] Executed action ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.BuscarTodasContasBancarias (ContasBancarias.Api) in 137.532ms
+2022-12-29 10:52:28.415 -03:00 [INF] Executed endpoint 'ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.BuscarTodasContasBancarias (ContasBancarias.Api)'
+2022-12-29 10:52:28.419 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/api/v1/conta-bancaria/consultar-todas - - - 200 - application/json;+charset=utf-8 266.9646ms
+2022-12-29 10:52:55.639 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7140/api/v1/conta-bancaria/cadastrar application/json 65
+2022-12-29 10:52:55.658 -03:00 [INF] CORS policy execution successful.
+2022-12-29 10:52:55.671 -03:00 [INF] Executing endpoint 'ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.Cadastrar (ContasBancarias.Api)'
+2022-12-29 10:52:55.723 -03:00 [INF] Route matched with {action = "Cadastrar", controller = "ContaBancaria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Cadastrar(ContasBancarias.Application.Commands.Requests.InserirContaBancariaRequest) on controller ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController (ContasBancarias.Api).
+2022-12-29 10:52:56.002 -03:00 [INF] Executing OkObjectResult, writing value of type 'ContasBancarias.Application.Commands.Responses.Response`1[[ContasBancarias.Application.Commands.Responses.StatusResponse, ContasBancarias.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-29 10:52:56.017 -03:00 [INF] Executed action ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.Cadastrar (ContasBancarias.Api) in 286.8463ms
+2022-12-29 10:52:56.024 -03:00 [INF] Executed endpoint 'ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.Cadastrar (ContasBancarias.Api)'
+2022-12-29 10:52:56.032 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7140/api/v1/conta-bancaria/cadastrar application/json 65 - 200 - application/json;+charset=utf-8 392.5246ms
+2022-12-29 10:53:03.918 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7140/api/v1/conta-bancaria/cadastrar application/json 68
+2022-12-29 10:53:03.927 -03:00 [INF] CORS policy execution successful.
+2022-12-29 10:53:03.934 -03:00 [INF] Executing endpoint 'ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.Cadastrar (ContasBancarias.Api)'
+2022-12-29 10:53:03.947 -03:00 [INF] Route matched with {action = "Cadastrar", controller = "ContaBancaria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Cadastrar(ContasBancarias.Application.Commands.Requests.InserirContaBancariaRequest) on controller ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController (ContasBancarias.Api).
+2022-12-29 10:53:04.204 -03:00 [INF] Executing OkObjectResult, writing value of type 'ContasBancarias.Application.Commands.Responses.Response`1[[ContasBancarias.Application.Commands.Responses.StatusResponse, ContasBancarias.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-29 10:53:04.217 -03:00 [INF] Executed action ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.Cadastrar (ContasBancarias.Api) in 260.3099ms
+2022-12-29 10:53:04.228 -03:00 [INF] Executed endpoint 'ContasBancarias.Api.Controller.ContaBancaria.ContaBancariaController.Cadastrar (ContasBancarias.Api)'
+2022-12-29 10:53:04.236 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7140/api/v1/conta-bancaria/cadastrar application/json 68 - 200 - application/json;+charset=utf-8 317.3797ms
+2022-12-29 11:54:22.814 -03:00 [INF] Now listening on: https://localhost:7140
+2022-12-29 11:54:22.892 -03:00 [INF] Now listening on: http://localhost:5189
+2022-12-29 11:54:22.908 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-29 11:54:22.915 -03:00 [INF] Hosting environment: Development
+2022-12-29 11:54:22.922 -03:00 [INF] Content root path: C:\Users\walla\OneDrive\Documentos\Source\Projeto_AspNetCore_ContaBancaria_SqLite\ContasBancarias.Api\
+2022-12-29 11:54:24.557 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/index.html - -
+2022-12-29 11:54:25.608 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/_framework/aspnetcore-browser-refresh.js - -
+2022-12-29 11:54:25.633 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/index.html - - - 200 - text/html;charset=utf-8 1079.1262ms
+2022-12-29 11:54:25.652 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 43.8464ms
+2022-12-29 11:54:25.708 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/_vs/browserLink - -
+2022-12-29 11:54:25.966 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 257.9289ms
+2022-12-29 11:54:26.101 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - -
+2022-12-29 11:54:26.569 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 468.1189ms
