@@ -1,9 +1,9 @@
 ﻿using ContasBancarias.Api.Application.Commands.Requests;
 using ContasBancarias.Api.Domain.Entities.Chave;
 
-namespace ContasBancarias.Api.Domain.Entities.Movimento
+namespace ContasBancarias.Api.Domain.Entities.Emprestimo
 {
-    public class Movimento : ChaveId
+    public class Emprestimo : ChaveId
     {        
         public string IdContaBancaria { get; set; }       
         public string TipoCredito { get; set; }
@@ -11,9 +11,9 @@ namespace ContasBancarias.Api.Domain.Entities.Movimento
         public decimal Valor { get; set; }
         public string DataPrimeiroVencimento { get; set; }
 
-        public Movimento() { }
+        public Emprestimo() { }
 
-        public Movimento(CreditarContaBancariaRequest request)
+        public Emprestimo(CreditarContaBancariaRequest request)
         {
             Id = Id;
             IdContaBancaria = IdContaBancaria;

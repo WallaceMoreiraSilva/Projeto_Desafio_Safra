@@ -3,7 +3,7 @@ using ContasBancarias.Api.Application.Enum;
 using ContasBancarias.Api.Application.Notification;
 using ContasBancarias.Api.Application.Utils;
 using ContasBancarias.Api.Application.Validations.Rules;
-using ContasBancarias.Api.Domain.Entities.Movimento;
+using ContasBancarias.Api.Domain.Entities.Emprestimo;
 using ContasBancarias.Api.Domain.Interfaces.Repository;
 using ContasBancarias.Api.Infrastructure.Repository;
 using ContasBancarias.Application.Commands.Responses;
@@ -17,17 +17,17 @@ namespace ContasBancarias.Api.Application.Commands.Handler
 {
     public class CreditarContaBancariaHandler : IRequestHandler<CreditarContaBancariaRequest, Response<StatusResponse>>
     {
-        private readonly IMovimentoRepository _movimentoContaBancariaRepository;
+        private readonly ICreditarRepository _emprestimoContaBancariaRepository;
         private readonly IContaBancariaRepository _contaBancariaRepository;
-        private readonly ILogger<MovimentoRepository> _logger;
+        private readonly ILogger<CreditarRepository> _logger;
         private readonly IMediator _mediator;
 
         public CreditarContaBancariaHandler(IMediator mediator, 
-            IMovimentoRepository movimentacaoContaBancariaRepository, 
+            ICreditarRepository emprestimoContaBancariaRepository, 
             IContaBancariaRepository contaBancariaRepository, 
-            ILogger<MovimentoRepository> logger)
+            ILogger<CreditarRepository> logger)
         {
-            _movimentoContaBancariaRepository = movimentacaoContaBancariaRepository;
+            _emprestimoContaBancariaRepository = emprestimoContaBancariaRepository;
             _contaBancariaRepository = contaBancariaRepository;
             _mediator = mediator;
             _logger = logger;
@@ -58,26 +58,26 @@ namespace ContasBancarias.Api.Application.Commands.Handler
 
                         await _contaBancariaRepository.Creditar(contaBancaria.Conta, contaBancaria);
 
-                        var movimentoRequest = new Movimento(request);
+                        var emprestimoRequest = new Emprestimo(request);
 
-                        movimentoRequest.TipoCredito = GetTipoCredito.GetTipoCreditoSigla(request.TipoCredito);
+                        emprestimoRequest.TipoCredito = GetTipoCredito.GetTipoCreditoSigla(request.TipoCredito);
 
-                        movimentoRequest.IdContaBancaria = contaBancaria.Id.ToString();
+                        emprestimoRequest.IdContaBancaria = contaBancaria.Id.ToString();
 
                         var valorEmprestimo = CalcularEmprestimo.GetValorPercentual(request.Valor, request.TipoCredito);
 
                         var totalEmprestimo = request.Valor + valorEmprestimo;
 
-                        movimentoRequest.Valor = totalEmprestimo;
+                        emprestimoRequest.Valor = totalEmprestimo;
 
-                        await _movimentoContaBancariaRepository.Inserir(movimentoRequest);
+                        await _emprestimoContaBancariaRepository.Inserir(emprestimoRequest);
 
                         await _mediator.Publish(new CreditarContaBancariaNotification
                         {
                             Conta = int.Parse(request.Conta),
                             Valor = request.Valor,
                             DataPrimeiroVencimento = request.DataPrimeiroVencimento,
-                            TipoCredito = GetTipoCredito.GetTipoCreditoId(movimentoRequest.TipoCredito)
+                            TipoCredito = GetTipoCredito.GetTipoCreditoId(emprestimoRequest.TipoCredito)
                         }, cancellationToken);
 
                         return FactoryResponse.Criar(new StatusResponse

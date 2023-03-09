@@ -18,11 +18,11 @@ namespace ContasBancarias.Infrastructure.Sqlite
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
-            var table = connection.Query<string>("SELECT name FROM sqlite_master WHERE type='table' AND (name = 'ContaBancaria' or name = 'Movimento');");
+            var table = connection.Query<string>("SELECT name FROM sqlite_master WHERE type='table' AND (name = 'ContaBancaria' or name = 'Emprestimo');");
 
             var tableName = table.FirstOrDefault();
 
-            if (!string.IsNullOrEmpty(tableName) && (tableName == "ContaBancaria" || tableName == "Movimento"))
+            if (!string.IsNullOrEmpty(tableName) && (tableName == "ContaBancaria" || tableName == "Emprestimo"))
                 return;
 
             connection.Execute("CREATE TABLE ContaBancaria ( " +
@@ -34,7 +34,7 @@ namespace ContasBancarias.Infrastructure.Sqlite
                                "CHECK(ativo in (0, 1)) " +
                                ");");
 
-            connection.Execute("CREATE TABLE Movimento ( " +
+            connection.Execute("CREATE TABLE Emprestimo ( " +
                 "id TEXT(250) PRIMARY KEY," +
                 "idContaBancaria TEXT(250) NOT NULL," +                
                 "tipoCredito TEXT(3) NOT NULL," +

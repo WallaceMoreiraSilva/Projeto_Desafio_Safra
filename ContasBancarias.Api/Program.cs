@@ -33,7 +33,7 @@ builder.Services.ConfigureMediatR();
 
 //Repositories
 builder.Services.AddSingleton<IContaBancariaRepository, ContaBancariaRepository>();
-builder.Services.AddSingleton<IMovimentoRepository, MovimentoRepository>();
+builder.Services.AddSingleton<ICreditarRepository, CreditarRepository>();
 
 //HealthChecks
 builder.Services.AddHealthChecks();

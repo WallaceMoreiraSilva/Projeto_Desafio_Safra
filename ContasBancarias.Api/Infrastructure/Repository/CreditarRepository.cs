@@ -1,5 +1,5 @@
 ﻿using ContasBancarias.Api.Application.Commands.Requests;
-using ContasBancarias.Api.Domain.Entities.Movimento;
+using ContasBancarias.Api.Domain.Entities.Emprestimo;
 using ContasBancarias.Api.Domain.Interfaces.Repository;
 using ContasBancarias.Api.Infrastructure.Sqlite.Configurations;
 using Dapper;
@@ -7,24 +7,24 @@ using Microsoft.Data.Sqlite;
 
 namespace ContasBancarias.Api.Infrastructure.Repository
 {
-    public class MovimentoRepository : IMovimentoRepository
+    public class CreditarRepository : ICreditarRepository
     {
         private readonly DatabaseConfig databaseConfig;
-        private readonly ILogger<MovimentoRepository> _logger;
+        private readonly ILogger<CreditarRepository> _logger;
 
-        public MovimentoRepository(DatabaseConfig databaseConfig, ILogger<MovimentoRepository> logger)
+        public CreditarRepository(DatabaseConfig databaseConfig, ILogger<CreditarRepository> logger)
         {
             this.databaseConfig = databaseConfig;
             _logger = logger;
         }
 
-        public async Task<Movimento> Inserir(Movimento request)
+        public async Task<Emprestimo> Inserir(Emprestimo request)
         {
             try
             {
                 using var connection = new SqliteConnection(databaseConfig.Name);
 
-                var query = $"insert into Movimento (id, idContaBancaria, tipoCredito, qtdParcelas, valor, dataPrimeiroVencimento) values (@Id, @IdContaBancaria, @TipoCredito, @QtdParcelas, @Valor, @DataPrimeiroVencimento)";
+                var query = $"insert into Emprestimo (id, idContaBancaria, tipoCredito, qtdParcelas, valor, dataPrimeiroVencimento) values (@Id, @IdContaBancaria, @TipoCredito, @QtdParcelas, @Valor, @DataPrimeiroVencimento)";
 
                 var result = connection.Execute(query, request);
 
@@ -32,7 +32,7 @@ namespace ContasBancarias.Api.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Falha ao inserir movimentação da conta corrente: {request.IdContaBancaria}");
+                _logger.LogError(ex, $"Falha ao inserir emprestimo para conta bancaria: {request.IdContaBancaria}");
                 throw;
             }
         }
