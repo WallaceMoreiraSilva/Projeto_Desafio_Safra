@@ -35,3 +35,16 @@
 2023-03-09 15:16:28.931 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 298.7370ms
 2023-03-09 15:16:29.404 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - -
 2023-03-09 15:16:30.071 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 666.4767ms
+2023-03-09 15:26:42.391 -03:00 [INF] Now listening on: https://localhost:7140
+2023-03-09 15:26:43.709 -03:00 [INF] Now listening on: http://localhost:5189
+2023-03-09 15:26:44.537 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-09 15:26:45.620 -03:00 [INF] Hosting environment: Development
+2023-03-09 15:26:45.696 -03:00 [INF] Content root path: C:\Users\walla\OneDrive\Documentos\Source\Projeto_Desafio_Safra\ContasBancarias.Api\
+2023-03-09 15:26:45.898 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/index.html - -
+2023-03-09 15:26:48.910 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/index.html - - - 200 - text/html;charset=utf-8 3029.5318ms
+2023-03-09 15:26:49.059 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/_framework/aspnetcore-browser-refresh.js - -
+2023-03-09 15:26:49.059 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/_vs/browserLink - -
+2023-03-09 15:26:49.152 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 92.9528ms
+2023-03-09 15:26:49.368 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 309.1687ms
+2023-03-09 15:26:49.887 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - -
+2023-03-09 15:26:51.275 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7140/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1388.4296ms

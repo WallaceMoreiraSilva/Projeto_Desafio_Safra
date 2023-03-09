@@ -14,7 +14,6 @@ INSERT INTO Financiamentos VALUES ('518.653.220-75', 2, 1000, 2, convert(datetim
 INSERT INTO Financiamentos VALUES ('711.471.230-80', 2, 1000, 2, convert(datetime,'2023-03-15T00:00:00.000'));
 
 
-select * from Financiamentos
 
 
 

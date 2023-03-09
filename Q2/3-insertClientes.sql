@@ -10,3 +10,4 @@ INSERT INTO Clientes VALUES ('711.471.230-80', 'Rafael', 4);
 
 
 
+
